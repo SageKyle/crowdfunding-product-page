@@ -1,0 +1,37 @@
+@import '../index.scss';
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: $tiny;
+	position: relative;
+	color: $white;
+
+	&__nav {
+		padding: $tiny;
+		border-radius: 1rem;
+		background-color: $white;
+		display: flex;
+		flex-direction: column;
+		color: $black;
+		position: absolute;
+		margin-top: $tiny;
+		top: $small;
+		right: $tiny;
+		left: $tiny;
+		z-index: 10;
+
+		&--link {
+			font-size: 1.8rem;
+			font-weight: 500;
+			text-transform: capitalize;
+			margin-block: 1rem;
+
+			&:not(:last-child) {
+				padding-bottom: $tiny;
+				border-bottom: 2px solid rgba($dark-gray, 0.1);
+			}
+		}
+	}
+}
