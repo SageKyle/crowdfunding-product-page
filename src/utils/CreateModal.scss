@@ -1,0 +1,19 @@
+@import '../index.scss';
+
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background-color: rgba($black, 0.2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal {
+	background-color: $white;
+	border-radius: $tiny;
+	margin: $small;
+	padding: $tiny;
+}

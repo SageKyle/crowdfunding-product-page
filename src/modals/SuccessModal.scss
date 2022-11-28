@@ -1,0 +1,18 @@
+@import '../index.scss';
+
+.success {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+
+	&__heading {
+		margin-block: $tiny;
+	}
+
+	&__btn {
+		margin-top: $tiny;
+		padding: 1.5rem 3rem;
+	}
+}
