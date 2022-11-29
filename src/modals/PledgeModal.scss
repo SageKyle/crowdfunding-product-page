@@ -1,27 +1,71 @@
-input[type='radio']:after {
-	width: 15px;
-	height: 15px;
-	border-radius: 15px;
-	top: -2px;
-	left: -1px;
+@import '../index.scss';
+
+// input[type='radio'] {
+// display: inline-block;
+// 	filter: invert(60%) sepia(94%) saturate(281%) hue-rotate(127deg)
+// 		brightness(85%) contrast(90%);
+// }
+
+// input[type='radio']:checked {
+// 	filter: invert(60%) sepia(94%) saturate(281%) hue-rotate(127deg)
+// 		brightness(85%) contrast(90%);
+// }
+
+.pledges {
 	position: relative;
-	background-color: #d1d3d1;
-	content: '';
-	display: inline-block;
-	visibility: visible;
-	border: 2px solid white;
+
+	// change color of all paragraphs
+	p {
+		color: $dark-gray;
+	}
+
+	// radio checkbox
+	.checkbox-wrapper {
+		margin-bottom: $tiny;
+		padding: $tiny;
+		border-radius: $tiny;
+		display: flex;
+		border: 2px solid rgba($black, 0.1);
+	}
+
+	.checkbox {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	&__heading {
+		margin-bottom: $tiny;
+	}
+
+	&__close {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	&__intro {
+		margin-bottom: $tiny;
+	}
 }
 
-input[type='radio']:checked:after {
-	width: 12px;
-	height: 12px;
-	border-radius: 15px;
-	top: -2px;
-	left: -1px;
-	position: relative;
-	background-color: #ffa500;
-	content: '';
-	display: inline-block;
-	visibility: visible;
-	border: 2px solid white;
+.pledge {
+	// 	margin-bottom: $tiny;
+	// 	padding: $tiny;
+	// 	border-radius: $tiny;
+	// 	display: flex;
+	// 	flex-wrap: wrap;
+	// 	border: 2px solid rgba($black, 0.1);
+
+	&__heading {
+		margin-bottom: $tiny;
+		margin-left: 1rem;
+
+		&--amount {
+			color: $moderate-cyan;
+		}
+	}
+
+	&__info {
+		margin-left: -$tiny;
+	}
 }

@@ -3,7 +3,7 @@ import BookmarkIcon from '../../assets/icons/icon-bookmark.svg';
 import Logo from '../../assets/img/logo-mastercraft.svg';
 import './CTA.scss';
 
-import { PledgeModal } from '../../modals/PledgeModal';
+// import { PledgeModal } from '../../modals/PledgeModal';
 
 export const CTA = () => {
 	return (
@@ -23,7 +23,6 @@ export const CTA = () => {
 					className="logo cta__buttons--bookmark"
 				/>
 			</div>
-			<PledgeModal />
 		</article>
 	);
 };

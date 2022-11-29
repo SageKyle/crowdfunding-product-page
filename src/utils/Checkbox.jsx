@@ -1,4 +1,4 @@
-export const Checkbox = ({ children, id, isChecked, setIsChecked }) => {
+export const Checkbox = ({ children, isChecked, setIsChecked }) => {
 	return (
 		<article className="checkbox-wrapper">
 			<label className="checkbox">
@@ -7,7 +7,6 @@ export const Checkbox = ({ children, id, isChecked, setIsChecked }) => {
 					name="pledge-checkbox"
 					checked={isChecked}
 					onChange={() => setIsChecked((prev) => !prev)}
-					id={id}
 				/>
 				<span className="pledge">{children}</span>
 			</label>
