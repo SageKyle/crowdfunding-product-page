@@ -1,4 +1,4 @@
-export const Checkbox = ({ children, isChecked, setIsChecked }) => {
+export const Checkbox = ({ children, isChecked, setIsChecked, isDisabled }) => {
 	return (
 		<article className="checkbox-wrapper">
 			<label className="checkbox">

@@ -1,6 +1,7 @@
 import { CreateModal } from '../utils/CreateModal';
 
 import { useState } from 'react';
+import Pledges from '../data/db.json';
 import { Checkbox } from '../utils/Checkbox';
 
 // styles/images
@@ -24,7 +25,32 @@ export const PledgeModal = ({ setShowModal, number }) => {
 					Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
 					the world?
 				</p>
-				<Checkbox
+				{Pledges &&
+					Pledges.map((pledge) => (
+						<Checkbox
+							key={pledge.id}
+							className="pledge"
+							isChecked={isChecked}
+							setIsChecked={setIsChecked}
+						>
+							<div className="pledge__heading">
+								<h4 className="pledge__heading--title">{pledge.name}</h4>
+								{pledge.amount && (
+									<h5 className="pledge__heading--amount">{pledge.amount}</h5>
+								)}
+							</div>
+							<p className="pledge__info">{pledge.info}</p>
+							{pledge.pledges && (
+								<p className="pledge__left">
+									<strong className="pledge__left--number">
+										{pledge.pledges}
+									</strong>{' '}
+									left
+								</p>
+							)}
+						</Checkbox>
+					))}
+				{/* <Checkbox
 					className="pledge"
 					isChecked={isChecked}
 					setIsChecked={setIsChecked}
@@ -50,7 +76,6 @@ export const PledgeModal = ({ setShowModal, number }) => {
 						<strong className="pledge__left--number">{number}</strong> left
 					</p>
 				</Checkbox>
-				{/*  */}
 				<Checkbox isChecked={!isChecked} setIsChecked={setIsChecked}>
 					<h4 className="pledge__heading">Bamboo Stand</h4>
 					<h5 className="pledge__amount">Pledge $25 or more</h5>
@@ -59,7 +84,7 @@ export const PledgeModal = ({ setShowModal, number }) => {
 						launch our promotional campaign, and you'll be added to a special
 						Backer member list.
 					</p>
-				</Checkbox>
+				</Checkbox> */}
 			</section>
 		</CreateModal>
 	);

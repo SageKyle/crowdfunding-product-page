@@ -2,7 +2,7 @@
 	{
 		"name": "pledge with no reward",
 		"id": 1,
-		"amount": "",
+		"amount": null,
 		"info": "Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.",
 		"pledges": null
 	},
@@ -25,6 +25,6 @@
 		"id": 4,
 		"amount": "Pledge $200 or more",
 		"info": "You get two Special Edition Mahogany stand, a Backer T-Shirt, and a personal thank you. You will be added to our Backer member list. Shipping is included.",
-		"pledges": 0
+		"pledges": null
 	}
 ]
