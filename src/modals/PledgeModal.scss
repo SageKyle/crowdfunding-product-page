@@ -43,6 +43,8 @@
 }
 
 .pledge {
+	// position: relative;
+
 	&__heading {
 		margin-bottom: $tiny;
 		margin-left: 1rem;
@@ -54,5 +56,37 @@
 
 	&__info {
 		margin-left: -$tiny;
+	}
+
+	&__left {
+		margin-top: $tiny;
+	}
+
+	&__cta {
+		text-align: center;
+		margin-top: $tiny;
+		padding-block: $tiny;
+		width: 100%;
+
+		&::before {
+			content: '';
+			display: table-cell;
+			height: 1px;
+			margin-bottom: 2rem;
+			background-color: rgba($black, 0.1);
+			position: absolute;
+			left: 0;
+			right: 0;
+		}
+
+		&--btns {
+			display: flex;
+			justify-content: space-between;
+			margin-top: $tiny;
+		}
+
+		.btn {
+			padding: 1rem $tiny;
+		}
 	}
 }

@@ -33,21 +33,36 @@ export const PledgeModal = ({ setShowModal, number }) => {
 							isChecked={isChecked}
 							setIsChecked={setIsChecked}
 						>
-							<div className="pledge__heading">
-								<h4 className="pledge__heading--title">{pledge.name}</h4>
-								{pledge.amount && (
-									<h5 className="pledge__heading--amount">{pledge.amount}</h5>
+							<div className="pledge__container">
+								<div className="pledge__heading">
+									<h4 className="pledge__heading--title">{pledge.name}</h4>
+									{pledge.amount && (
+										<h5 className="pledge__heading--amount">
+											Pledge ${pledge.amount} or more
+										</h5>
+									)}
+								</div>
+								<p className="pledge__info">{pledge.info}</p>
+								{pledge.pledges && (
+									<>
+										<p className="pledge__left">
+											<strong className="pledge__left--number">
+												{pledge.pledges}
+											</strong>{' '}
+											left
+										</p>
+										<div className="pledge__cta">
+											<p className="pledge__cta--info">Enter your pledge</p>
+											<div className="pledge__cta--btns">
+												<button className="btn" disabled>
+													$ {pledge.amount}
+												</button>
+												<button className="btn">Continue</button>
+											</div>
+										</div>
+									</>
 								)}
 							</div>
-							<p className="pledge__info">{pledge.info}</p>
-							{pledge.pledges && (
-								<p className="pledge__left">
-									<strong className="pledge__left--number">
-										{pledge.pledges}
-									</strong>{' '}
-									left
-								</p>
-							)}
 						</Checkbox>
 					))}
 				{/* <Checkbox
