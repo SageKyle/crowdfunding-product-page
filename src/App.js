@@ -14,10 +14,9 @@ function App() {
 	return (
 		<div className="App">
 			<Hero />
-			<CTA />
+			<CTA setShowModal={setShowModal} />
 			<Project />
 			{showModal && <PledgeModal setShowModal={setShowModal} number={number} />}
-			<button onClick={() => setShowModal(true)}>Show Modal</button>
 		</div>
 	);
 }

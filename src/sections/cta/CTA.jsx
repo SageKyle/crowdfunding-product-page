@@ -5,7 +5,7 @@ import './CTA.scss';
 
 // import { PledgeModal } from '../../modals/PledgeModal';
 
-export const CTA = () => {
+export const CTA = ({ setShowModal }) => {
 	return (
 		<article className="cta">
 			<div className="cta__logo">
@@ -16,7 +16,12 @@ export const CTA = () => {
 				A beautifully handcrafted monitor stand to reduce neck and eye strain.
 			</p>
 			<div className="cta__buttons">
-				<button className="btn cta__buttons--action">Back this project</button>
+				<button
+					className="btn cta__buttons--action"
+					onClick={() => setShowModal(true)}
+				>
+					Back this project
+				</button>
 				<img
 					src={BookmarkIcon}
 					alt="add to bookmark"
