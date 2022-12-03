@@ -5,27 +5,27 @@
 // 		brightness(85%) contrast(90%);
 // }
 
+// change color of all paragraphs
+p {
+	color: $dark-gray;
+}
+
+// radio checkbox
+.checkbox-wrapper {
+	margin-bottom: $tiny;
+	padding: $tiny;
+	border-radius: $tiny;
+	display: flex;
+	border: 2px solid rgba($black, 0.1);
+}
+
+.checkbox {
+	display: flex;
+	align-items: flex-start;
+}
+
 .pledges {
 	position: relative;
-
-	// change color of all paragraphs
-	p {
-		color: $dark-gray;
-	}
-
-	// radio checkbox
-	.checkbox-wrapper {
-		margin-bottom: $tiny;
-		padding: $tiny;
-		border-radius: $tiny;
-		display: flex;
-		border: 2px solid rgba($black, 0.1);
-	}
-
-	.checkbox {
-		display: flex;
-		align-items: flex-start;
-	}
 
 	&__heading {
 		margin-bottom: $tiny;
@@ -55,6 +55,7 @@
 	}
 
 	&__info {
+		width: 100%;
 		margin-left: -$tiny;
 	}
 

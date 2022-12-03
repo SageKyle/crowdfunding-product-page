@@ -1,2 +1,50 @@
+@import '../../index.scss';
 
+.stats {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: $tiny;
+	border: 1px solid rgba($dark-gray, 0.2);
+	border-radius: 1rem;
+	margin: $tiny;
 
+	&__section {
+		margin-bottom: $tiny;
+
+		&--heading {
+			font-size: 2.5rem;
+			margin-bottom: 1rem;
+		}
+
+		&--info {
+			font-size: 1.8rem;
+		}
+	}
+
+	&__section::after {
+		display: block;
+		content: '';
+		width: $big;
+		height: 2px;
+		margin: $tiny auto 0;
+		background-color: rgba($dark-gray, 0.5);
+	}
+
+	&__progress--backdrop {
+		width: 100%;
+		height: 1rem;
+		border-radius: $small;
+		background-color: rgba($dark-gray, 0.2);
+		margin-block: $tiny;
+	}
+
+	&__progress--foreground {
+		background-color: $moderate-cyan;
+		width: 80%;
+		height: 100%;
+		border-radius: $small;
+	}
+}
