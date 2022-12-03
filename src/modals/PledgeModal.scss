@@ -63,6 +63,11 @@ p {
 		margin-top: $tiny;
 	}
 
+	// hide 'Select Reward' button
+	&__btn {
+		display: none;
+	}
+
 	&__cta {
 		text-align: center;
 		margin-top: $tiny;

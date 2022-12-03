@@ -51,6 +51,12 @@ $large: 10rem;
 
 // utilities
 
+strong {
+	color: $black;
+	font-weight: 700;
+	font-size: 1.8rem;
+}
+
 .btn {
 	color: $white;
 	background-color: $moderate-cyan;
@@ -63,9 +69,9 @@ $large: 10rem;
 }
 
 .btn:disabled {
-	color: $black;
+	color: rgba($dark-gray, 0.5);
 	background-color: transparent;
-	border: 2px solid $dark-gray;
+	border: 2px solid rgba($dark-gray, 0.5);
 }
 
 .hidden {

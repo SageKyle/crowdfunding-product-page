@@ -18,6 +18,16 @@
 		position: relative;
 	}
 
+	.pledge__action {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+	}
+
+	.pledge__btn {
+		padding: 1rem $tiny;
+	}
+
 	.pledge__cta {
 		display: none;
 	}

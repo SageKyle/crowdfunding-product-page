@@ -26,17 +26,20 @@ export const Pledges = ({ Pledges }) => {
 							<p className="pledge__info">{pledge.info}</p>
 							{pledge.pledges && (
 								<>
-									<p className="pledge__left">
-										<strong className="pledge__left--number">
-											{pledge.pledges}
-										</strong>{' '}
-										left
-									</p>
+									<div className="pledge__action">
+										<p className="pledge__left">
+											<strong className="pledge__left--number">
+												{pledge.pledges}
+											</strong>{' '}
+											left
+										</p>
+										<button className="btn pledge__btn">Select Reward</button>
+									</div>
 									<div className="pledge__cta">
 										<p className="pledge__cta--info">Enter your pledge</p>
 										<div className="pledge__cta--btns">
 											<button className="btn" disabled>
-												$ {pledge.amount}
+												$ <strong className="amount">{pledge.amount}</strong>
 											</button>
 											<button className="btn">Continue</button>
 										</div>
