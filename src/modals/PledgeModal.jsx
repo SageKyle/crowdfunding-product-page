@@ -7,7 +7,7 @@ import { Pledges } from '../utils/Pledges';
 import Icon from '../assets/icons/icon-close-modal.svg';
 import './PledgeModal.scss';
 
-export const PledgeModal = ({ setShowModal, number }) => {
+export const PledgeModal = ({ setShowModal, dispatch, number }) => {
 	return (
 		<CreateModal>
 			<section className="pledges">
@@ -22,7 +22,7 @@ export const PledgeModal = ({ setShowModal, number }) => {
 					Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
 					the world?
 				</p>
-				<Pledges Pledges={Data} />
+				<Pledges Pledges={Data} dispatch={dispatch} />
 
 				{/* <Checkbox
 					className="pledge"

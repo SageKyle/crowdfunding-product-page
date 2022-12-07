@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Checkbox } from './Checkbox';
+// import {SuccessModal} from '../modals/SuccessModal'
 
-export const Pledges = ({ Pledges }) => {
+export const Pledges = ({ Pledges, dispatch }) => {
 	const [isChecked, setIsChecked] = useState(false);
 
 	return (
@@ -41,7 +42,12 @@ export const Pledges = ({ Pledges }) => {
 											<button className="btn" disabled>
 												$ <strong className="amount">{pledge.amount}</strong>
 											</button>
-											<button className="btn">Continue</button>
+											<button
+												onClick={() => dispatch({ payload: pledge.amount })}
+												className="btn"
+											>
+												Continue
+											</button>
 										</div>
 									</div>
 								</>

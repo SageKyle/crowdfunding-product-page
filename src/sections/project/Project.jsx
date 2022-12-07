@@ -22,9 +22,9 @@ export const Project = () => {
 				desk space below your computer to allow notepads, and USB sticks to be
 				stored under the stand.
 			</p>
-			<arcticle className="projects__container">
+			<article className="projects__container">
 				<Pledges Pledges={filteredPledges} />
-			</arcticle>
+			</article>
 		</section>
 	);
 };
