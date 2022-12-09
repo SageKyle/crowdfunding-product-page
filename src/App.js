@@ -1,12 +1,13 @@
 import './App.scss';
 
+import { useModalContext } from './hooks/useModalContext';
 import { PledgeModal } from './modals/PledgeModal';
 import { CTA } from './sections/cta/CTA';
 import { Hero } from './sections/hero/Hero';
 import { Project } from './sections/project/Project';
 import { Stats } from './sections/stats/Stats';
 
-import { useReducer, useState } from 'react';
+import { useReducer } from 'react';
 
 let FUND_AMOUNT = 89914;
 let TOTAL_BACKERS = 5007;
@@ -27,26 +28,22 @@ const reducer = (state, action) => {
 };
 
 function App() {
+	// const [showModal, setShowModal] = useState(false);
+	const { showModal } = useModalContext();
+	// const { setShowModal } = useModalUpdateContext();
 	const [state, dispatch] = useReducer(reducer, { FUND_AMOUNT, TOTAL_BACKERS });
-	const [showModal, setShowModal] = useState(true);
 	const number = 101;
 
 	return (
 		<div className="App">
 			<Hero />
-			<CTA setShowModal={setShowModal} />
+			<CTA />
 			<Stats
 				fundingAmount={state.FUND_AMOUNT}
 				totalBackers={state.TOTAL_BACKERS}
 			/>
 			<Project />
-			{showModal && (
-				<PledgeModal
-					setShowModal={setShowModal}
-					dispatch={dispatch}
-					number={number}
-				/>
-			)}
+			{showModal && <PledgeModal dispatch={dispatch} number={number} />}
 		</div>
 	);
 }

@@ -3,9 +3,13 @@ import BookmarkIcon from '../../assets/icons/icon-bookmark.svg';
 import Logo from '../../assets/img/logo-mastercraft.svg';
 import './CTA.scss';
 
+import { useModalUpdateContext } from '../../hooks/useModalContext';
+
 // import { PledgeModal } from '../../modals/PledgeModal';
 
-export const CTA = ({ setShowModal }) => {
+export const CTA = () => {
+	const { handleModal } = useModalUpdateContext();
+
 	return (
 		<article className="cta">
 			<div className="cta__logo">
@@ -18,7 +22,7 @@ export const CTA = ({ setShowModal }) => {
 			<div className="cta__buttons">
 				<button
 					className="btn cta__buttons--action"
-					onClick={() => setShowModal(true)}
+					onClick={() => handleModal(true)}
 				>
 					Back this project
 				</button>

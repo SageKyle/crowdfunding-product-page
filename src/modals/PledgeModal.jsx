@@ -1,13 +1,16 @@
 import { CreateModal } from '../utils/CreateModal';
 
 import Data from '../data/db.json';
+import { useModalUpdateContext } from '../hooks/useModalContext';
 import { Pledges } from '../utils/Pledges';
 
 // styles/images
 import Icon from '../assets/icons/icon-close-modal.svg';
 import './PledgeModal.scss';
 
-export const PledgeModal = ({ setShowModal, dispatch, number }) => {
+export const PledgeModal = ({ dispatch, number }) => {
+	const { handleModal } = useModalUpdateContext();
+
 	return (
 		<CreateModal>
 			<section className="pledges">
@@ -16,7 +19,7 @@ export const PledgeModal = ({ setShowModal, dispatch, number }) => {
 					src={Icon}
 					alt="Close modal"
 					className="pledges__close"
-					onClick={() => setShowModal(false)}
+					onClick={() => handleModal(false)}
 				/>
 				<p className="pledges__intro">
 					Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
