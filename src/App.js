@@ -29,7 +29,7 @@ const reducer = (state, action) => {
 
 function App() {
 	// const [showModal, setShowModal] = useState(false);
-	const { showModal } = useModalContext();
+	const { modalContext: showModal } = useModalContext();
 	// const { setShowModal } = useModalUpdateContext();
 	const [state, dispatch] = useReducer(reducer, { FUND_AMOUNT, TOTAL_BACKERS });
 	const number = 101;

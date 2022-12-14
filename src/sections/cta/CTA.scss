@@ -48,7 +48,44 @@
 
 		// bookmark icon
 		&--bookmark {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-radius: $small;
+			background-color: rgba($dark-gray, 0.2);
+			color: $dark-gray;
 			margin-left: 1rem;
+		}
+	}
+}
+
+.bookmark__txt {
+	display: none;
+}
+
+/* media queries */
+/* > 700px */
+@media screen and (min-width: 43.25em) {
+	.bookmark__txt {
+		display: inline-block;
+	}
+
+	.bookmark {
+		background-color: rgba($moderate-cyan, 0.2);
+		color: $dark-cyan;
+
+		& .logo {
+			fill: $white;
+			filter: invert(26%) sepia(42%) saturate(6447%) hue-rotate(164deg)
+				brightness(87%) contrast(84%);
+		}
+
+		&__txt {
+			font-size: 2rem;
+			font-weight: bold;
+			display: inline-block;
+			margin-left: $tiny;
+			padding-right: $tiny;
 		}
 	}
 }

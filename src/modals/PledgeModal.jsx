@@ -1,7 +1,7 @@
 import { CreateModal } from '../utils/CreateModal';
 
 import Data from '../data/db.json';
-import { useModalUpdateContext } from '../hooks/useModalContext';
+import { useModalContext } from '../hooks/useModalContext';
 import { Pledges } from '../utils/Pledges';
 
 // styles/images
@@ -9,7 +9,8 @@ import Icon from '../assets/icons/icon-close-modal.svg';
 import './PledgeModal.scss';
 
 export const PledgeModal = ({ dispatch, number }) => {
-	const { handleModal } = useModalUpdateContext();
+	const { modalContext } = useModalContext();
+	const handleModal = modalContext.setShowModal;
 
 	return (
 		<CreateModal>

@@ -57,9 +57,15 @@ strong {
 	font-size: 1.8rem;
 }
 
+button {
+	border: unset;
+	background-color: inherit;
+	cursor: pointer;
+}
+
 .btn {
 	color: $white;
-	background-color: $moderate-cyan;
+	background-color: $dark-cyan;
 	padding: $tiny $small;
 	border-radius: $small;
 	cursor: pointer;

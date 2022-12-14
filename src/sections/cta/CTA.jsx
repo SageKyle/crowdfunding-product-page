@@ -3,12 +3,23 @@ import BookmarkIcon from '../../assets/icons/icon-bookmark.svg';
 import Logo from '../../assets/img/logo-mastercraft.svg';
 import './CTA.scss';
 
-import { useModalUpdateContext } from '../../hooks/useModalContext';
+import { useState } from 'react';
 
-// import { PledgeModal } from '../../modals/PledgeModal';
+import { useModalContext } from '../../hooks/useModalContext';
 
 export const CTA = () => {
-	const { handleModal } = useModalUpdateContext();
+	const [bookmark, setBookmark] = useState('Bookmark');
+	const { modalContext } = useModalContext();
+
+	const handleModal = () => {
+		// const openModal = modalContext.showModal;
+		console.log(modalContext);
+		// openModal(true);
+	};
+
+	const handleBookmark = () => {
+		setBookmark('Bookmarked');
+	};
 
 	return (
 		<article className="cta">
@@ -22,15 +33,21 @@ export const CTA = () => {
 			<div className="cta__buttons">
 				<button
 					className="btn cta__buttons--action"
-					onClick={() => handleModal(true)}
+					onClick={() => handleModal()}
 				>
 					Back this project
 				</button>
-				<img
-					src={BookmarkIcon}
-					alt="add to bookmark"
-					className="logo cta__buttons--bookmark"
-				/>
+				<button
+					className={
+						bookmark === 'Bookmarked'
+							? 'cta__buttons--bookmark bookmark'
+							: 'cta__buttons--bookmark'
+					}
+					onClick={handleBookmark}
+				>
+					<img src={BookmarkIcon} alt="add to bookmark" className="logo" />
+					<span className="bookmark__txt">{bookmark}</span>
+				</button>
 			</div>
 		</article>
 	);
