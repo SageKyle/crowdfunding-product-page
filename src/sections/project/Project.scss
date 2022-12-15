@@ -32,3 +32,12 @@
 		display: none;
 	}
 }
+
+/* media queries */
+/* > 700px */
+@media screen and (min-width: 43.25em) {
+	.projects {
+		max-width: 50%;
+		margin-inline: auto;
+	}
+}

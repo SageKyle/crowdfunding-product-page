@@ -38,13 +38,13 @@ export const Navbar = () => {
 				</div>
 				<section className="navbar__nav hidden" ref={navRef}>
 					<a href="/" className="navbar__nav--link">
-						about
+						About
 					</a>
 					<a href="/" className="navbar__nav--link">
-						discover
+						Discover
 					</a>
 					<a href="/" className="navbar__nav--link">
-						get started
+						Get Started
 					</a>
 				</section>
 			</nav>

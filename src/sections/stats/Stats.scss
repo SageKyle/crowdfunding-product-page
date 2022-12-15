@@ -48,3 +48,12 @@
 		border-radius: $small;
 	}
 }
+
+/* media queries */
+/* > 700px */
+@media screen and (min-width: 43.25em) {
+	.stats {
+		max-width: 50%;
+		margin-inline: auto;
+	}
+}

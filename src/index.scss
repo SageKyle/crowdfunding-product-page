@@ -83,3 +83,11 @@ button {
 .hidden {
 	display: none;
 }
+
+/* media queries */
+/* > 700px */
+@media screen and (min-width: 43.25em) {
+	.hidden {
+		display: inline-block;
+	}
+}

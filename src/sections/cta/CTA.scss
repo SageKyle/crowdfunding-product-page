@@ -34,7 +34,8 @@
 
 	// buttons container
 	&__buttons {
-		margin-block: 1rem;
+		margin: 1rem $tiny;
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -54,7 +55,7 @@
 			border-radius: $small;
 			background-color: rgba($dark-gray, 0.2);
 			color: $dark-gray;
-			margin-left: 1rem;
+			margin-left: auto;
 		}
 	}
 }
@@ -66,6 +67,14 @@
 /* media queries */
 /* > 700px */
 @media screen and (min-width: 43.25em) {
+	.cta {
+		max-width: 50%;
+		margin-inline: auto;
+	}
+}
+
+/* > 870px */
+@media screen and (min-width: 54em) {
 	.bookmark__txt {
 		display: inline-block;
 	}

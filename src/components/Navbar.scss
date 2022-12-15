@@ -9,6 +9,7 @@
 	color: $white;
 
 	&__nav {
+		text-transform: capitalize;
 		padding: $tiny;
 		border-radius: 1rem;
 		background-color: $white;
@@ -25,7 +26,6 @@
 		&--link {
 			font-size: 1.8rem;
 			font-weight: 500;
-			text-transform: capitalize;
 			margin-block: 1rem;
 
 			&:not(:last-child) {
@@ -33,5 +33,26 @@
 				border-bottom: 2px solid rgba($dark-gray, 0.1);
 			}
 		}
+	}
+}
+
+/* media queries */
+/* > 700px */
+@media screen and (min-width: 43.25em) {
+	.navbar__nav {
+		position: relative;
+		flex-direction: row;
+		background-color: transparent;
+		margin-top: 0;
+		color: $white;
+		top: 0;
+
+		&--link {
+			margin: 0 0 0 $tiny;
+		}
+	}
+
+	.navbar__toggle {
+		display: none;
 	}
 }
