@@ -27,11 +27,11 @@
 			font-size: 1.8rem;
 			font-weight: 500;
 			margin-block: 1rem;
+		}
 
-			&:not(:last-child) {
-				padding-bottom: $tiny;
-				border-bottom: 2px solid rgba($dark-gray, 0.1);
-			}
+		&--link:not(:last-child) {
+			padding-bottom: $tiny;
+			border-bottom: 2px solid rgba($dark-gray, 0.1);
 		}
 	}
 }
@@ -49,6 +49,10 @@
 
 		&--link {
 			margin: 0 0 0 $tiny;
+		}
+
+		&--link:not(:last-child) {
+			border: unset;
 		}
 	}
 
