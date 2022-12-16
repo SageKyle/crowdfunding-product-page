@@ -9,12 +9,12 @@ import { useModalContext } from '../../hooks/useModalContext';
 
 export const CTA = () => {
 	const [bookmark, setBookmark] = useState('Bookmark');
-	const { modalContext } = useModalContext();
+	const {
+		modalState: { setShowModal },
+	} = useModalContext();
 
 	const handleModal = () => {
-		// const openModal = modalContext.showModal;
-		console.log(modalContext);
-		// openModal(true);
+		setShowModal(true);
 	};
 
 	const handleBookmark = () => {

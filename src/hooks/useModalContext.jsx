@@ -2,23 +2,11 @@ import { useContext } from 'react';
 import { ModalContext } from '../context/ModalContext';
 
 export const useModalContext = () => {
-	const modalContext = useContext(ModalContext);
+	const context = useContext(ModalContext);
 
-	if (!modalContext) {
+	if (!context) {
 		throw Error('useModalContext must be inside a ModalContextProvider');
 	}
 
-	return modalContext;
+	return context;
 };
-
-// export const useModalUpdateContext = () => {
-// 	const handleModal = useContext(ModalUpdateContext);
-
-// 	if (!handleModal) {
-// 		throw Error(
-// 			'useModalUpdateContext must be inside a ModalUpdateContextProvider'
-// 		);
-// 	}
-
-// 	return handleModal;
-// };

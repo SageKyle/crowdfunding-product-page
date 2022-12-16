@@ -9,8 +9,9 @@ import Icon from '../assets/icons/icon-close-modal.svg';
 import './PledgeModal.scss';
 
 export const PledgeModal = ({ dispatch, number }) => {
-	const { modalContext } = useModalContext();
-	const handleModal = modalContext.setShowModal;
+	const {
+		modalState: { setShowModal },
+	} = useModalContext();
 
 	return (
 		<CreateModal>
@@ -20,7 +21,7 @@ export const PledgeModal = ({ dispatch, number }) => {
 					src={Icon}
 					alt="Close modal"
 					className="pledges__close"
-					onClick={() => handleModal(false)}
+					onClick={() => setShowModal(false)}
 				/>
 				<p className="pledges__intro">
 					Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
